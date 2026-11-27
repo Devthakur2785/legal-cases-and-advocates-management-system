@@ -1,0 +1,41 @@
+/* Extra styles needed by the JS - linked after the page CSS on every page */
+.hidden{ display: none !important; }
+
+.form-msg{
+  font-size: 13.5px;
+  padding: 10px 14px;
+  border-radius: 3px;
+  margin-bottom: 16px;
+  border: 1px solid;
+}
+.form-msg.error{   color: var(--oxblood, #A23B3B); background: #FBF1F2; border-color: #E3C2C6; }
+.form-msg.success{ color: var(--green, #2F7A4F);   background: #F0F7F3; border-color: #BFD8CB; }
+
+.empty{
+  text-align: center;
+  color: var(--ink-soft, #5B5B5B);
+  padding: 26px 10px !important;
+  font-size: 14px;
+}
+.panel .empty{ padding: 18px 0 !important; }
+
+.link-btn{ background: none; border: none; cursor: pointer; font-family: inherit; padding: 0; }
+
+.toast{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: var(--navy, #000080);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all .25s;
+  z-index: 50;
+}
+.toast.show{ opacity: 1; transform: none; }
+.toast.error{ background: var(--oxblood, #A23B3B); }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard — Legal Case &amp; Advocate Management System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="extras.css">
+<script src="app.js"></script>
+<script>requireLogin();</script>
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="dashboard.html" class="brand">
+      CaseLedger
+      <span>Legal Case &amp; Advocate Management System</span>
+    </a>
+    <nav class="nav">
+      <a href="dashboard.html" class="active">Dashboard</a>
+      <a href="business-module.html">Cases</a>
+      <a href="profile.html">Advocates</a>
+      <a href="login.html" id="signOut">Sign out</a>
+    </nav>
+  </header>
+
+  <div class="wrap">
+
+    <div class="page-head">
+      <h1 id="greeting">Good morning</h1>
+      <p>Here's what's happening with your cases today.</p>
+    </div>
+
+    <section class="stats">
+      <div class="stat"><div class="num" id="statTotal">0</div><div class="label">Total cases</div></div>
+      <div class="stat pending"><div class="num" id="statPending">0</div><div class="label">Pending</div></div>
+      <div class="stat hearing"><div class="num" id="statOngoing">0</div><div class="label">Ongoing</div></div>
+      <div class="stat closed"><div class="num" id="statClosed">0</div><div class="label">Closed</div></div>
+    </section>
+
+    <section class="grid-2">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>Upcoming hearings</h2>
+          <a href="business-module.html">View all</a>
+        </div>
+        <div id="hearingList"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>Recent cases</h2>
+          <a href="business-module.html">View all</a>
+        </div>
+        <div id="recentList"></div>
+      </div>
+    </section>
+
+    <section class="actions">
+      <a href="business-module.html#new" class="action-card">
+        <div class="icon">+</div>
+        <h3>Add a new case</h3>
+        <p>Register a case and assign it to an advocate.</p>
+      </a>
+      <a href="profile.html" class="action-card">
+        <div class="icon">A</div>
+        <h3>Update advocate profile</h3>
+        <p>Edit contact details and specialization.</p>
+      </a>
+      <a href="business-module.html" class="action-card">
+        <div class="icon">⏱</div>
+        <h3>Check hearing schedule</h3>
+        <p>See every upcoming hearing this month.</p>
+      </a>
+    </section>
+
+    <footer>Dashboard — Legal Case &amp; Advocate Management System, GLA University, Mathura.</footer>
+  </div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
