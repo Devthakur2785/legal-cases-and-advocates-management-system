@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Advocate Profile — Legal Case &amp; Advocate Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="extras.css">
+  <script src="app.js"></script>
+  <script>requireLogin();</script>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a href="dashboard.html" class="brand">
+      CaseLedger
+      <span>Legal Case &amp; Advocate Management System</span>
+    </a>
+    <nav class="nav">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="business-module.html">Cases</a>
+      <a href="profile.html" class="active">Profile</a>
+      <a href="login.html" id="signOut">Sign out</a>
+    </nav>
+  </header>
+
+  <div class="wrap">
+
+    <div class="page-head">
+      <h1>Advocate Profile</h1>
+      <p>Personal details, specialization and contact information.</p>
+    </div>
+
+    <div class="profile-card">
+      <div class="avatar" id="avatar">NC</div>
+      <div class="profile-summary">
+        <h2 id="sumName">Name</h2>
+        <div class="role" id="sumRole">Role</div>
+        <div class="meta" id="sumMeta"></div>
+      </div>
+      <div class="status-chip"><span class="dot"></span> Active</div>
+    </div>
+
+    <div class="grid-2">
+
+      <div class="panel">
+        <h2>Contact &amp; practice details</h2>
+
+        <div id="formMsg" class="hidden"></div>
+
+        <div class="field-row">
+          <div class="field"><label for="fName">Full name</label><input type="text" id="fName"></div>
+          <div class="field"><label for="fBar">Bar registration no.</label><input type="text" id="fBar"
+              placeholder="UP/2014/4821"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="fEmail">Email address (login ID)</label><input type="email" id="fEmail"
+              readonly></div>
+          <div class="field"><label for="fPhone">Phone number</label><input type="tel" id="fPhone"
+              placeholder="+91 98765 43210"></div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="fSpec">Specialization</label>
+            <select id="fSpec">
+              <option>Civil &amp; Commercial Law</option>
+              <option>Criminal Law</option>
+              <option>Family Law</option>
+              <option>Corporate Law</option>
+            </select>
+          </div>
+          <div class="field"><label for="fCourt">Primary court</label><input type="text" id="fCourt"
+              placeholder="District Court, Mathura"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="fYears">Years of practice</label><input type="text" id="fYears"
+              placeholder="8"></div>
+          <div class="field"><label for="fAreas">Practice areas (comma separated)</label><input type="text" id="fAreas"
+              placeholder="Civil Law, Property Law"></div>
+        </div>
+        <div class="field-row">
+          <div class="field" style="flex-basis: 100%;">
+            <label for="fBio">Short bio</label>
+            <textarea id="fBio"></textarea>
+          </div>
+        </div>
+
+        <button class="btn" type="button" id="saveProfile">Save changes</button>
+        <button class="btn light" type="button" id="cancelProfile">Cancel</button>
+      </div>
+
+      <div>
+        <div class="panel">
+          <h2>Caseload summary</h2>
+          <div class="mini-stat"><span>Total cases</span><span class="num" id="mTotal">0</span></div>
+          <div class="mini-stat"><span>Pending</span><span class="num" id="mPending">0</span></div>
+          <div class="mini-stat"><span>Ongoing</span><span class="num" id="mOngoing">0</span></div>
+          <div class="mini-stat"><span>Closed</span><span class="num" id="mClosed">0</span></div>
+        </div>
+        <div class="panel">
+          <h2>Practice areas</h2>
+          <div class="tag-list" id="areaList"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>Advocate profile — Legal Case &amp; Advocate Management System, GLA University, Mathura.</footer>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+
+</html>
